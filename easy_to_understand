@@ -1,0 +1,28 @@
+fs wav文件中的采样率
+sig wav文件中的数据内容
+winlen 代表每帧的长度
+ovrlen 代表每帧移动的长度
+fs*winlen 代表一帧中的采样点数目
+
+N 代表wav文件的长度
+flth 整型的每一帧中的采样点数目
+foVr 整型的帧移中包含的采样点数目  
+frame 表示的是wav文件中会包含的帧数
+slen 表示的该wav文件最小的长度
+signal中就是wav中的数据
+w 开始初始化汉明窗
+ak 即做快速傅里叶变换后和nftt取绝对值
+Num 是
+Dexpl 和 Dexpr 分别为汉明窗的左右两个滑动窗口的长度，segThres为文章中alpha的值（可调）
+idx等于257
+
+nftt的值是512 但具体意义不知道 采样率
+
+
+numpy.fix 取趋近于0
+numpy.floor 取绝对值后的较小的整数部分
+eg：a = np.array([-1.7, -1.5, -0.2, 0.2, 1.5, 1.7, 2.0])
+       np.floor(a)
+       array([-2., -2., -1.,  0.,  1.,  1.,  2.])
+
+nfr10是总共的帧数
